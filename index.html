@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Dynamic Task Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <main class="app-container">
+        <section class="task-card">
+            <header class="app-header">
+                <h1>Secure Dynamic Task Manager</h1>
+                <p>Create, complete, edit, and remove tasks safely.</p>
+            </header>
+
+            <section class="task-controls">
+                <label for="taskInput" class="sr-only">Task</label>
+                <input id="taskInput" type="text" placeholder="Enter a task" autocomplete="off">
+                <button id="addTaskBtn" type="button">Add Task</button>
+                <button id="loadSamplesBtn" type="button">Load Sample Tasks</button>
+            </section>
+
+            <p id="taskMessage" class="message" role="alert" aria-live="polite"></p>
+
+            <section class="summary" aria-label="Task summary">
+                <div class="summary-box">
+                    <span>Total Tasks</span>
+                    <strong id="totalCount">0</strong>
+                </div>
+                <div class="summary-box">
+                    <span>Pending</span>
+                    <strong id="pendingCount">0</strong>
+                </div>
+                <div class="summary-box">
+                    <span>Completed</span>
+                    <strong id="completedCount">0</strong>
+                </div>
+            </section>
+
+            <section class="task-section">
+                <h2>My Tasks</h2>
+                <ul id="taskList"></ul>
+            </section>
+        </section>
+    </main>
+</body>
+</html>
